@@ -1,10 +1,14 @@
-/* Basic Styles */
+@import url("fonts/fonts.css");/* Basic Styles */
 body {
-    font-family: sans-serif;
+    font-family: lato;
     margin: 0;
     padding: 0;
     background-color: black;
     color: white;
+    background-image: url("/image.png");
+        background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
 }
 
 /* Header - Fullscreen Video Background */
@@ -28,6 +32,9 @@ header h1, h1 {
     line-height: 2; /* More spacing between lines */
     text-indent: 30px; /* Increased indentation */
     padding: 15px;
+    font-family: lato-italic!important;
+    text-align: center;
+
 }
 
 /* Video Background */
@@ -52,6 +59,9 @@ h3 {
     line-height: 2.2;
     text-indent: 35px;
     margin-bottom: 10px; /* Slight space under each h3 */
+    font-family: lato!important;
+    text-align: center;
+
 }
 
 /* CTA Button - At Bottom of Video */
@@ -139,11 +149,14 @@ button[type="submit"] {
     font-size: 1.6rem;
     border-radius: 8px;
     cursor: pointer;
+    width: 15rem;
     transition: background-color 0.3s ease;
+    margin: auto;
 }
 
 button[type="submit"]:hover {
     background-color: #0056b3;
+    
 }
 
 /* General Text Formatting */
@@ -154,15 +167,20 @@ h2 {
 }
 
 p {
-    font-size: 1.8rem;
-    line-height: 2.2;
+    font-size: 1.7rem;
+    line-height: 2;
     padding-left: 30px; /* Ensures the entire paragraph is indented */
+    font-family: lato;
+    font-weight: 800;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 3rem;
+        font-size: 3rem;    
+        text-align: center;
+
+        font-family: Lato-Regular!important;
     }
 
     /* Stack side images on smaller screens */
@@ -211,10 +229,28 @@ p {
     h3 {
         font-size: 2rem;
         text-indent: 25px;
+        font-family: lato!important;
+        
     }
 
     p {
         font-size: 1.5rem;
         text-indent: 20px;
     }
+}
+
+@font-face {
+    font-family: 'lato-italic';
+    src: url('./fonts/Lato-Italic.ttf') format('woff2'),
+    ;
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lato';
+    src: url('./fonts/Lato-Thin.ttf') format('woff2'),
+         url('./fonts/lato-regular.ttf') format('woff2'),
+    ;
+    font-weight: normal;
+    font-style: normal;
 }
