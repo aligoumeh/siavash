@@ -1,0 +1,220 @@
+/* Basic Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+/* Header - Fullscreen Video Background */
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}
+
+/* Consistent h1 Styling */
+header h1, h1 {
+    font-size: 4rem; /* Standardize h1 size */
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    line-height: 2; /* More spacing between lines */
+    text-indent: 30px; /* Increased indentation */
+    padding: 15px;
+}
+
+/* Video Background */
+.video-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Send video behind text */
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Smaller h3 Styling */
+h3 {
+    font-size: 2rem; /* Smaller h3 size */
+    line-height: 2.2;
+    text-indent: 35px;
+    margin-bottom: 10px; /* Slight space under each h3 */
+}
+
+/* CTA Button - At Bottom of Video */
+.cta-button {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 18px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Full-Screen Side-by-Side Images (side1.png & side2.png) */
+.side-images {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* To overlay text over images */
+}
+
+.side-images img {
+    width: 50%; /* Each image takes half the screen */
+    height: auto;
+    display: block;
+}
+
+/* Overlaying Product Information on Images */
+.side-images .overlay {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    width: 80%; /* Overlay covers most of the image width */
+}
+
+/* Form Styling - Bigger and Vertical */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    font-size: 1.6rem;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background-color: #1f1f1f;
+    color: white;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* General Text Formatting */
+h2 {
+    font-size: 3rem; /* Increased heading size */
+    line-height: 2.5;
+    text-indent: 40px; /* More indentation */
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 2.2;
+    padding-left: 30px; /* Ensures the entire paragraph is indented */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    /* Stack side images on smaller screens */
+    .side-images {
+        flex-direction: column;
+    }
+
+    .side-images img {
+        width: 100%; /* Each image takes full width on small screens */
+    }
+
+    .side-images .overlay {
+        width: 90%; /* Slightly smaller overlay on mobile */
+        top: 15%;
+    }
+
+    /* Adjust CTA button */
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    /* Adjust form for mobile */
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    label {
+        font-size: 1.6rem;
+    }
+
+    input, textarea {
+        font-size: 1.4rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        text-indent: 30px;
+    }
+
+    h3 {
+        font-size: 2rem;
+        text-indent: 25px;
+    }
+
+    p {
+        font-size: 1.5rem;
+        text-indent: 20px;
+    }
+}
